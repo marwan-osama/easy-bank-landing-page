@@ -1,0 +1,30 @@
+$colors: (
+	"primary": hsl(136, 65%, 51%),
+	"secondary-d": hsl(233, 26%, 24%),
+	"secondary-l": hsl(192, 70%, 51%),
+	"neutral-1": hsl(233, 8%, 62%),
+	"neutral-2": hsl(220, 16%, 96%),
+	"neutral-3": hsl(0, 0%, 98%),
+	"neutral-4": hsl(0, 0%, 100%),
+);
+
+@each $clr, $val in $colors {
+	.clr-#{$clr} {
+		color: $val;
+	}
+	.bg-#{$clr} {
+		background-color: $val;
+	}
+	.clr-#{$clr}-hvr {
+		transition: color 250ms;
+		&:hover {
+			color: $val !important;
+		}
+	}
+	.bg-#{$clr}-hvr {
+		transition: color 250ms;
+		&:hover {
+			background-color: $val !important;
+		}
+	}
+}

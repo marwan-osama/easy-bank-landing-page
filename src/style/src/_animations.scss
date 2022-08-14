@@ -1,0 +1,24 @@
+.nav-buttons-slide-down-enter {
+	transform: translate(-50%, 0) scaleY(0) !important;
+}
+.nav-buttons-slide-down-enter-active {
+	transform-origin: top center;
+	transform: translate(-50%, 0) scaleY(1) !important;
+	transition: transform 300ms;
+}
+.nav-buttons-slide-down-enter-done {
+	transform-origin: top center;
+	transform: translate(-50%, 0) scaleY(1) !important;
+	transition: transform 300ms;
+}
+.nav-buttons-slide-down-exit {
+	transform: translate(-50%, 0) scaleY(1) !important;
+}
+.nav-buttons-slide-down-exit-active {
+	transform-origin: top center;
+	transform: translate(-50%, 0) scaleY(0) !important;
+	transition: transform 300ms;
+}
+.nav-buttons-slide-down-exit-done {
+	transform: translate(-50%, 0) scaleY(0) !important;
+}

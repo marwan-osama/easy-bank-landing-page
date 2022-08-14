@@ -1,0 +1,88 @@
+footer {
+	padding: 48px 0;
+	.footer-inner-wrapper {
+		@include flexCenter;
+		justify-content: space-between;
+
+		@include m-screen {
+			flex-direction: column;
+			gap: 24px;
+		}
+
+		.left {
+			@include flexCenter;
+			gap: calc(48px + 5vw);
+
+			@include m-screen {
+				flex-direction: column;
+				gap: 24px;
+			}
+
+			.logo-social {
+				@include flexCenter;
+				flex-direction: column;
+				gap: 32px;
+
+				.social-icons {
+					@include flexCenter;
+					gap: 12px;
+
+					& > a {
+						position: relative;
+					}
+
+					.icon-primary {
+						position: absolute;
+						top: 0;
+						left: 0;
+						opacity: 0;
+						transition: opacity 250ms;
+					}
+					.icon {
+						transition: opacity 250ms;
+					}
+
+					& > a:hover {
+						.icon-primary {
+							opacity: 1;
+						}
+						.icon {
+							opacity: 0;
+						}
+					}
+				}
+			}
+			.link-lists {
+				@include flexCenter;
+				gap: calc(24px + 2.5vw);
+
+				@include m-screen {
+					flex-direction: column;
+					text-align: center;
+					gap: 12px;
+				}
+
+				ul {
+					display: flex;
+					flex-direction: column;
+					gap: 24px;
+
+					@include m-screen {
+						gap: 12px;
+					}
+				}
+			}
+		}
+
+		.right {
+			display: flex;
+			align-items: flex-end;
+			flex-direction: column;
+			gap: 24px;
+
+			@include m-screen {
+				align-items: center;
+			}
+		}
+	}
+}

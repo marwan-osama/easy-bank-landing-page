@@ -1,0 +1,34 @@
+.section-1 {
+	padding: 72px 0;
+
+	.section-1-inner-wrapper {
+		@include flexCenter;
+		align-items: start;
+		flex-direction: column;
+		gap: 48px;
+		section {
+			position: relative;
+			z-index: 100;
+		}
+		.icon-cards {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 24px;
+
+			@include min-max-breakpoint(480px, 768px) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+			@include min-max-breakpoint(0, 480px) {
+				grid-template-columns: repeat(1, 1fr);
+			}
+
+			.icon-card {
+				@include max-breakpoint(480px) {
+					@include flexCenter;
+					flex-direction: column;
+					text-align: center;
+				}
+			}
+		}
+	}
+}

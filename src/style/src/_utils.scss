@@ -1,0 +1,40 @@
+@mixin flexCenter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.pos-relative {
+	position: relative;
+}
+
+.reset {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style-type: none;
+	color: inherit;
+	font-family: inherit;
+}
+
+.flex-column {
+	@include flexCenter;
+	flex-direction: column;
+}
+.flex-row {
+	@include flexCenter;
+}
+
+.hidden {
+	display: none !important;
+}
+.hidden-m-screen {
+	@include m-screen {
+		display: none;
+	}
+}
+.hidden-m-screen-not {
+	@include min-breakpoint(768px) {
+		display: none;
+	}
+}

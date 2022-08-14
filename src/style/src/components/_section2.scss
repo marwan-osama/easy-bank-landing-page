@@ -1,0 +1,23 @@
+.section-2 {
+	padding: 64px 0;
+
+	.section-2-inner-wrapper {
+		@include flexCenter;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 42px;
+	}
+
+	.img-cards {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 24px;
+
+		@include min-max-breakpoint(480px, 1024px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@include min-max-breakpoint(0, 480px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}
